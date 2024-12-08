@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome-free/css/all.min.css">
+
+    <title>Form Pendaftaran</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white font-weight-bolder" href="#"><i class="fas fa-hospital-alt text-white icon-rs"></i><h3>RS PERMATA SEPATAN</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="profile">
+           <img src="img/profile.jpg" alt="profile" class="ml-auto rounded-circle" data-bs-toggle="tooltip" title="Profile Anda">
+           <p class="text-white font-weight-bold name">Gadis Mustika</p><i class="fas fa-cogs icon-size text-white mr-4" data-bs-toggle="tooltip" title="Pengaturan"></i>
+        </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar & dashboard -->
+      <div class="row no-gutters mt-5">
+          <div class="col-md-2 bg-dark mt-4 sidebar p-4 ">
+            <input class="form-control me-2 mt-3 bg-dark" type="search" placeholder="Search" aria-label="Search" class="text-white bg-secondary"> <i class="fas fa-search text-white search"></i>
+            <ul class="nav flex-column sidebar">
+                <li class="nav-item">
+                  <a class="nav-link text-white mt-2" aria-current="page" href="#"><i class="fas fa-book-medical text-white mr-4"></i>     KELOLA MENU</a>
+                </li> <hr class="bg-secondary">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-users"></i>     DATA PEGAWAI</a>
+                  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="dashboard.html"><i class="fas fa-user-md"></i>  DATA DOKTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-calendar-alt"></i>   JADWAL PRAKTEK DOKTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-address-card"></i>  DATA MASTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="data_pasien.html"><i class="far fa-address-card"></i>    DATA PASIEN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="form_pendaftaran.html"><i class="fas fa-file-alt"></i>       FORM PENDAFTARAN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-bed"></i>  DATA TEMPAT TIDUR</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="rawatjalan.html"><i class="fas fa-bed"></i>  LAPORAN RAWAT JALAN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-address-card"></i> LAPORAN RAWAT INAP </a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="menu_apotek.html"><i class="fas fa-capsules"></i>      MODUL APOTEK  <i class="fas fa-angle-left text-white angle"></i></a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-clinic-medical"></i>  PROFIL RUMAH SAKIT </a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-stethoscope"></i>    MENU TINDAKAN <i class="fas fa-angle-left text-white"></i> </a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="login.html"><i class="fas fa-sign-out-alt text-white "></i>  LOGOUT</a>  <hr class="bg-secondary">
+                </li>
+               
+              </ul>
+          </div>
+
+          <div class="col-md-10">
+              <!-- Biodata Pasien -->
+            <div class="biodata-pasien bg-warning text-white mt-5 p-3 bordered">
+              <h5>BIODATA PASIEN</h5>
+              </div>
+              <div class="container  bg-light border border-warning border-2 mb-5">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">No Rawat</th>
+                            <th scope="col">No Rekamedis</th>
+                            <th scope="col">Nama Pasien</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021/03/21/0003</td>
+                            <td>00002</td>
+                            <td>GADIS MUSTIKA</td>
+                        </tr>
+                    </tbody>
+                   </table>
+                   <!-- Button Modal Tindakan -->
+               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#inputTindakan" style="margin-top: 20px;">Input Tindakan</button>
+                   <!-- Modal Tindakan -->
+                   <div class="modal fade" id="inputTindakan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="width: 56vw; margin-left: -30px;">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="inputTindakan">Input Tindakan</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <div class="row">
+                             <label for="inputTindakan" class="col-sm-2 col-form-label">Dilakukan Oleh</label>
+                             <div class="col-sm-10" style="margin-top: 10px;">
+                                 <select class="form-select" aria-label="InputTindakan">
+                                     <option selected>Dokter</option>
+                                     <option value="2">Suster</option>
+                                     <option value="3">Bidan</option>
+                                 </select>
+                             </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                             <label for="namaTindakan" class="col-sm-2 col-form-label">Nama Tindakan</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="Masukkan Nama Tindakan">
+                             </div>
+                          </div>
+                         <hr>
+                          <div class="row">
+                             <label for="namaHasilPeriiksa" class="col-sm-2 col-form-label">Hasil Periksa</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="masukkan hasil periksa">
+                             </div>
+                          </div>
+                         <hr>
+                          <div class="row">
+                             <label for="namaPerkembangan" class="col-sm-2 col-form-label">Perkembangan</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="masukkan perkembangan sekarang">
+                             </div>
+                          </div>
+                         <hr>
+                          <div class="row">
+                             <label for="namaDokter" class="col-sm-2 col-form-label">Masukkan Nama Dokter</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="Masukkan Nama Dokter">
+                             </div>
+                          </div>
+                         <hr>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                          <button type="button" class="btn btn-primary">Simpan Data</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Button Modal Input Obat -->
+                <button class="btn btn-info text-white" data-bs-toggle="modal" data-bs-target=#inputObat style="margin-left: 8px; margin-top: 20px;">Input Obat</button>
+                  <!-- Modal Input Obat -->
+                  <div class="modal fade" id="inputObat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="width: 45vw;">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="inputObat">Form Pemberian Obat</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                             <label for="namaTindakan" class="col-sm-2 col-form-label">Cari Obat</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="Cari Obat">
+                             </div>
+                          </div>
+                         <hr>
+                          <div class="row">
+                             <label for="namaHasilPeriiksa" class="col-sm-2 col-form-label">Qty</label>
+                             <div class="col-md-10" style="margin-top: 10px;">
+                               <input type="text" class="form-control" placeholder="Qty">
+                             </div>
+                          </div>
+                         <hr>
+                         
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                          <button type="button" class="btn btn-danger">Simpan</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+    <!-- Riwayat Tindakan -->
+            <div class="biodata-pasien bg-warning text-white mt-5 p-3 bordered">
+                <h5>RIWAYAT TINDAKAN</h5>
+                </div>
+                <div class="container  bg-light border border-warning border-2 mb-5">
+               <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">Tindakan</th>
+                        <th scope="col">Hasil Periksa</th>
+                        <th scope="col">Perkembangan</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Tarif</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>pemeriksaan suhu tubuh</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>2021-22-03 06:00:00</td>
+                        <td>20.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>cek trombosit</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>2021-22-03 06:00:00</td>
+                        <td>34.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>tes antigen</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>2021-22-03 06:00:00</td>
+                        <td>100.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>cek golongan darah</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>2021-22-03 06:00:00</td>
+                        <td>25.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>pemeriksaan gigi</td>
+                        <td>OK</td>
+                        <td>OK</td>
+                        <td>2021-22-03 06:00:00</td>
+                        <td>67.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="5" class="text-center">Total</th>
+                        <td>246.000</td>
+                    </tr>
+                </tbody>
+               </table>
+          </div>
+          <!-- Riwayat Pemberian Obat -->
+            <div class="riwayat-pemberianObat bg-warning text-white mt-5 p-3 bordered">
+                <h5>RIWAYAT PEMBERIAN OBAT</h5>
+                </div>
+                <div class="container  bg-light border border-warning border-2 mb-5">
+               <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">Nama Obat dan Alat Kesehatan</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Jumlah</th>
+                        <th scope="col">Harga</th>
+                        <th scope="col">Sub Total</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Bodrexin</td>
+                        <td>2021-22-03</td>
+                        <td>200</td>
+                        <td>Rp3.000</td>
+                        <td>Rp600.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Kursi Roda</td>
+                        <td>2021-22-03</td>
+                        <td>2</td>
+                        <td>Rp100.000</td>
+                        <td>Rp200.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Cairan Infus</td>
+                        <td>2021-06-06</td>
+                        <td>5</td>
+                        <td>Rp10.000</td>
+                        <td>Rp50.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Stethoscope</td>
+                        <td>2021-06-06</td>
+                        <td>1</td>
+                        <td>Rp250.000</td>
+                        <td>Rp250.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>IM Boost</td>
+                        <td>2021-07-02</td>
+                        <td>2</td>
+                        <td>Rp20.000</td>
+                        <td>Rp40.000</td>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="5" class="text-center">Total</th>
+                        <td>Rp1.140.000</td>
+                    </tr>
+                </tbody>
+               </table>
+          </div>
+ </div>
+          </div>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script>
+        // Tooltip
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    // Modals
+            var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+})
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

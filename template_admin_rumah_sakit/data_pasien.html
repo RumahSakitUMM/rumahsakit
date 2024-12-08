@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../fontawesome-free/css/all.min.css">
+
+    <title>Data Pasien</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white font-weight-bolder" href="#"><i class="fas fa-hospital-alt text-white icon-rs"></i><h3>RS PERMATA SEPATAN</h3></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="profile">
+           <img src="img/profile.jpg" alt="profile" class="ml-auto rounded-circle" data-bs-toggle="tooltip" title="Profile Anda">
+           <p class="text-white font-weight-bold name">Gadis Mustika</p><i class="fas fa-cogs icon-size text-white mr-4" data-bs-toggle="tooltip" title="Pengaturan"></i>
+        </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sidebar & dashboard -->
+      <div class="row no-gutters mt-5">
+          <div class="col-md-2 bg-dark mt-4 sidebar p-4 ">
+            <input class="form-control me-2 mt-3 bg-dark" type="search" placeholder="Search" aria-label="Search" class="text-white bg-secondary"> <i class="fas fa-search text-white search"></i>
+            <ul class="nav flex-column sidebar">
+                <li class="nav-item">
+                  <a class="nav-link text-white mt-2" aria-current="page" href="#"><i class="fas fa-book-medical text-white mr-4"></i>     KELOLA MENU</a>
+                </li> <hr class="bg-secondary">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-users"></i>     DATA PEGAWAI</a>
+                  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="dashboard.html"><i class="fas fa-user-md"></i>  DATA DOKTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-calendar-alt"></i>   JADWAL PRAKTEK DOKTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-address-card"></i>  DATA MASTER</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="data_pasien.html"><i class="far fa-address-card"></i>    DATA PASIEN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="form_pendaftaran.html"><i class="fas fa-file-alt"></i>       FORM PENDAFTARAN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-bed"></i>  DATA TEMPAT TIDUR</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="rawatjalan.html"><i class="fas fa-bed"></i>  LAPORAN RAWAT JALAN</a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-address-card"></i> LAPORAN RAWAT INAP </a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-capsules"></i>      MODUL APOTEK  <i class="fas fa-angle-left text-white angle"></i></a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-clinic-medical"></i>  PROFIL RUMAH SAKIT </a>  <hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#"><i class="fas fa-stethoscope"></i>    MENU TINDAKAN <i class="fas fa-angle-left text-white"></i> </a><hr class="bg-secondary">
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="login.html"><i class="fas fa-sign-out-alt text-white "></i>  LOGOUT</a>  <hr class="bg-secondary">
+                </li>
+               
+              </ul>
+          </div>
+
+         
+
+          <div class="col-md-10">
+            <!-- Data Pendaftaran -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="data-pendaftaran bg-warning text-white mt-5 p-3 bordered">
+                        <h5>DATA PENDAFTARAN</h5>
+                        </div>
+                        <div class="container  bg-light border border-success border-2 mb-5">
+                            <div class="row">
+                                <label for="inputTindakan" class="col-sm-4 col-form-label">No Registrasi</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Masukkan No Registrasi Anda">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <label for="caraMasuk" class="col-sm-4 col-form-label">No Rawat</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Masukkan No Rawat Anda">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <label for="caraMasuk" class="col-sm-4 col-form-label">Cara Masuk</label>
+                                <div class="col-md-8">
+                                    <select class="form-select" aria-label="CaraMasuk">
+                                        <option selected>RAWAT JALAN</option>
+                                        <option value="2">RAWAT INAP</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <label for="caraMasuk" class="col-sm-4 col-form-label">Ruangan Dirawat</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Masukkan Kode Tempat Tidur">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <label for="caraMasuk" class="col-sm-4 col-form-label">Tanggal Daftar</label>
+                                <div class="col-md-8">
+                                    <input type="date" class="form-control" placeholder="Masukkan Tanggal Daftar">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <label for="caraMasuk" class="col-sm-4 col-form-label">Dokter Penanggung Jawab</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Masukkan Nama Dokter">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <label for="poliKlinik" class="col-sm-4 col-form-label">Poliklinik Tujuan</label>
+                              <div class="col-md-8">
+                                  <select class="form-select" aria-label="Poliklinik Tujuan">
+                                      <option selected>POLI MATA</option>
+                                      <option value="1">POLI GIGI</option>
+                                      <option value="2">POLI ANAK</option>
+                                      <option value="3">POLI JIWA</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <hr>
+                            <div class="row">
+                              <label for="jenisBayar" class="col-sm-4 col-form-label">Jenis Bayar</label>
+                              <div class="col-md-8">
+                                  <select class="form-select" aria-label="JenisBayar">
+                                      <option selected>BPJS</option>
+                                      <option value="1">ASURANSI</option>
+                                      <option value="2">SENDIRI</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <hr>
+                          <div class="row">
+                            <label for="asalRujukan" class="col-sm-4 col-form-label">Asal Rujukan</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" placeholder="Asal Rujukan">
+                            </div>
+                        </div>
+                        <hr>
+
+                        <a href="#"><button class="btn btn-danger"type="submit" style="margin-left: 150px;"><i class="fas fa-save"></i> Buat</button></a>
+                        <a href="#"><button class="btn btn-info text-white" style="margin-left: 5px;"><i class="fas fa-sign-out-alt text-white "></i> Keluar</button></a>
+                  </div>
+                </div>
+                <!-- Data Pasien -->
+             <div class="col-sm-6">
+                <div class="riwayat-pemberianObat bg-warning text-white mt-5 p-3 bordered">
+                    <h5>DATA PASIEN</h5>
+                    </div>
+                    <div class="container  bg-light border border-warning border-2 mb-5">
+                      <div class="row">
+                        <label for="noRekamedis" class="col-sm-4 col-form-label">No Rekamedis</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Masukkan No Rekamedis">
+                        </div>
+                    </div>
+                    <hr>
+                      <div class="row">
+                        <label for="namaPasien" class="col-sm-4 col-form-label">Nama Pasien</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Nama Pasien">
+                        </div>
+                    </div>
+                    <hr>
+                      <div class="row">
+                        <label for="tanggalLahir" class="col-sm-4 col-form-label">Tanggal Lahir</label>
+                        <div class="col-md-8">
+                            <input type="date" class="form-control" placeholder="Tanggal Lahir">
+                        </div>
+                    </div>
+                    <hr>
+                      <div class="row">
+                        <label for="namaPenanggungJawab" class="col-sm-4 col-form-label">Nama Penanggung Jawab</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Nama Penanggung Jawab">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <label for="jenisBayar" class="col-sm-4 col-form-label">Hubungan Dengan Penanggung Jawab</label>
+                      <div class="col-md-8">
+                          <select class="form-select" aria-label="JenisBayar">
+                              <option selected>saudara kandung</option>
+                              <option value="1">istri</option>
+                              <option value="2">suami</option>
+                          </select>
+                      </div>
+                  </div>
+                  <hr>
+                    <div class="row">
+                      <label for="alamat" class="col-sm-4 col-form-label">Alamat Penanggung Jawab</label>
+                      <div class="col-md-8">
+                         <textarea rows="3" class="form-control" placeholder="Alamat Penanggung Jawab"></textarea>
+                      </div>
+                  </div>
+              </div>
+             </div>  
+            </div>        
+        </div>
+          </div>
+      </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script>
+        // Tooltip
+          var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+    // Modals
+            var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+})
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
